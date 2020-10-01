@@ -1,4 +1,4 @@
-package laitecproject.personaltest.com.ui.login
+package laitecproject.personaltest.com.ui.login.ui.login
 
 import android.app.Activity
 import androidx.lifecycle.Observer
@@ -15,20 +15,20 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 
-import laitecproject.personaltest.com.R
+import laitecproject.personaltest.com.ui.login.R
 
-class LoginActivity : AppCompatActivity() {
+class SignUp : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.login_activity)
+        setContentView(R.layout.activity_login)
 
         val username = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)
-        val login = findViewById<Button>(R.id.btn_signup)
+        val login = findViewById<Button>(R.id.login)
         val loading = findViewById<ProgressBar>(R.id.loading)
 
         loginViewModel = ViewModelProviders.of(this, LoginViewModelFactory())
